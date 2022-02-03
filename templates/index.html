@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(65, 45, 241)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>GRE Score          <input id ="second" name="GRE_Score" required="required" max="340"></h3>
+            <h3>TOEFL Score        <input id="second" name="TOEFL_Score" required="required" max="250"></h3>
+            <h3>University Rating  <select name="University Rating" id="third" required="required"> 
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option> </select>
+            <h3>SOP                <input id="second" name="SOP" required="required" max="5"></h3>
+            <h3>LOR                <input id="second" name="LOR" required="required" max="5"></h3>
+            <h3>CGPA               <input id="second" name="CGPA" required="required" max="10"></h3>
+            <h3>Research           <select name="Research" id="third" required="required"> 
+                <option value="1"> 1 </option>
+                <option value="0"> 0 </option>
+            </select>
+            
+            
+            <br><br><button id="sub" type="submit ">Chance of Admit</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <h3> {{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(238, 229, 107);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 10px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 100px;
+            bottom: 9%;
+            height: 750px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        
+        }
+        
+        #fuel:hover {
+            background-color: rgb(54, 14, 105);
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: rgb(162, 80, 255);
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: rgb(26, 10, 95);
+        }
+        
+        #sub {
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 5px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 5px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 8px;
+            height: 10px;
+            font-size: 60px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
